@@ -1,4 +1,4 @@
-import './Buttons.css';
+import './buttons.css';
 const Buttons = ({ children }) => {
   return (
     <section class="error">
