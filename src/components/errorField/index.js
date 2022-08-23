@@ -1,4 +1,4 @@
-import './ErrorField.css';
+import './errorField.css';
 const ErrorField = ({ children }) => {
   return (
     <section class="error">

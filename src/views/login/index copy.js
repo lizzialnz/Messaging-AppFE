@@ -1,4 +1,4 @@
-import LoginUx from "./loginUx";
+import LoginUx from "./LoginUx";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -24,14 +24,14 @@ const Login = () => {
   const onSignInClick = async (e) => {
     e.preventDefault();
     e.stopPropagation();
-    Navigator('/messages');
+    Navigator('/signin');
   }
   const onLoginClick = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     try {
       await submitLogin(dispatch, formValues.email, formValues.password);
-      Navigator('/messages')
+      Navigator('/menu')
     } catch (ex) {
       console.log(ex);
     }

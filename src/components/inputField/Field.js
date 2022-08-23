@@ -1,4 +1,4 @@
-import './Field.css';
+import './field.css';
 const Field = ({
   name = "",
   labelText = "",

@@ -9,7 +9,7 @@
   font-size: 1rem;
   background-color: transparent;
   border:none;
-  border-bottom: 1px solid rgba(56, 55, 55, 0.452);
+  border-bottom: 1px solid rgba(56, 55, 55, 0.425);
   outline-style: none;
 }
 .input input:focus {
@@ -17,6 +17,6 @@
 }
 .input label{
   font-size: 0.8rem;
-  color: rgb(32, 32, 32);
+  color: rgba(32, 32, 32, 0.911);
   margin-bottom: 0.5rem;
 }
