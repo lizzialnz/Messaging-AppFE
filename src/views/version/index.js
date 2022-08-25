@@ -3,13 +3,8 @@ import { useEffect } from 'react';
 import Page from '../../components/page';
 import { app_loaded, app_start_loading } from './versionAction';
 import { setAuth } from '../../services/api/axios';
-const h1VersionStyle = {
-  backgroundColor: "#fff",
-  textAlign: "center",
-  padding: "50px 50px 50px 50px",
-  boxShadow: "0px 3px 5px #bbb",
-  textShadow: "0px 3px 5px #bbb",
-}
+import '../css/version.css'
+import Logo from '../../components/images/logosintexto.png';
 
 const Version = () => {
   const dispatch = useDispatch();
@@ -23,14 +18,17 @@ const Version = () => {
       setAuth(user.token);
     }
     app_loaded(dispatch);
-  }, [user]);
+  }, [user,dispatch]);
 
   return (
     <Page
       useAbsoluteCenter={true}
       showNavBar={false}
     >
-      <h1 style={h1VersionStyle}>Messages App <br /> v1.0.0</h1>
+      <div className="h1VersionStyle">
+      <img src={Logo} alt=""></img>
+      <h1>Messages LApp <br /> v1.0.0</h1>
+      </div>
     </Page>
   )
 }
