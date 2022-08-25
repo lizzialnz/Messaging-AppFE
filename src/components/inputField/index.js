@@ -1,3 +1,3 @@
-import Field from './field';
+import Field from './Field';
 
 export { Field };

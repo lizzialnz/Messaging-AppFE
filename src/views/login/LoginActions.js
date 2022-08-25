@@ -6,10 +6,10 @@ const LOGIN_FAILED = "LOGIN_FAILED";
 const LOGIN_JWT_SET = "LOGIN_JWT_SET";
 const LOGIN_CLEAN_ERROR = "LOGIN_CLEAN_ERROR";
 
-export const submitLogin = async (dispatch, email, password) => {
+export const submitLogin = async (dispatch, user, password) => {
   try {
     dispatch({ type: LOGIN_LOADING, payload: null });
-    const { data } = await loginApi(email, password);
+    const { data } = await loginApi(user, password);
     dispatch({ type: LOGIN_SUCCESS, payload: data });
     console.log(data);
     setAuth(data.token);

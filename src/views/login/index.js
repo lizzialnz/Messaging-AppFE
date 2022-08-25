@@ -7,7 +7,7 @@ import { submitLogin, cleanLoginError } from './loginActions';
 const Login = () => {
   const Navigator = useNavigate();
   const dispatch = useDispatch();
-  const [formValues, setFormValues] = useState({ email: '', password: '' });
+  const [formValues, setFormValues] = useState({ user: '', password: '' });
   const { isLoading, error } = useSelector(state => state.security);
 
   const onChangeHandler = (event) => {
@@ -21,30 +21,30 @@ const Login = () => {
     }
     setFormValues(newFormValues);
   }
-  const onSignInClick = async (e) => {
+  const onSignUpClick = async (e) => {
     e.preventDefault();
     e.stopPropagation();
-    Navigator('/messages');
+    Navigator('/signup');
   }
   const onLoginClick = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     try {
-      await submitLogin(dispatch, formValues.email, formValues.password);
+      await submitLogin(dispatch, formValues.user, formValues.password);
       Navigator('/messages')
     } catch (ex) {
       console.log(ex);
     }
   }
   const password = () => {
-    Navigator('/password');
+    Navigator('/messages');
   }
 
   return (
     <LoginUx
       passwordValue={formValues.password}
-      emailValue={formValues.email}
-      onSignInClick={onSignInClick}
+      userValue={formValues.user}
+      onSignUpClick={onSignUpClick}
       onLoginClick={onLoginClick}
       onChangeHandler={onChangeHandler}
       password={password}

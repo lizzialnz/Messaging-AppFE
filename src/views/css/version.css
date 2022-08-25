@@ -1,0 +1,13 @@
+.h1VersionStyle {
+    background-Color: #fff;
+    text-align: center;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 0px 3px 5px rgb(0,0,0, 0.5);
+    text-shadow: 0px 3px 5px rgb(0,0,0, 0.5);
+    border-radius: 5px;
+  }
+
+.h1VersionStyle img{
+  width: 80px;
+  height: 80px;
+}
