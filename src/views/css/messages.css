@@ -1,0 +1,55 @@
+.titulo {
+    text-align: center;
+    text-Shadow: 0px 3px 5px rgb(0, 0, 0, 0.5);
+}
+
+.form {
+    min-width: 380px;
+    max-width: 640px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.cards .card {
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    display: flexbox;
+    width: 600px;
+    height: 100%;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    margin-right: 75px;
+}
+
+.cards .card>.contenido-texto-card {
+    padding: 20px 20px 20px 20px;
+    color: #fff;
+}
+
+.cards .card>.contenido-texto-card p {
+    text-align: left;
+    font-weight: 300px;
+}
+
+.hora {
+    margin-top: 40px;
+    margin-left: 300px;
+    font-size: 10px;
+}
+
+.receiver {
+    text-align: center;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+}
