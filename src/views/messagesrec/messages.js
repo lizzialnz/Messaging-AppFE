@@ -5,7 +5,6 @@ import localForage from "localforage";
 
 //cambiar el usuario estático por una peticion get
 var valor="lizzi1"
-
 // var sender = localForage.getItem('user').then(function (value) {
 //   alert(sender);
 // }).catch(function(err) {
@@ -13,7 +12,7 @@ var valor="lizzi1"
 // });
 
 
-const baseURL = `/message/msgsuser/${valor}`;
+const baseURL = `/message/receiver/${valor}`;
 var data = []
 
 export default function App(props) {
@@ -44,7 +43,7 @@ export default function App(props) {
           <div class="cards">
             <div className="card">
               <div className="contenido-texto-card">
-                <p key={item.identidad}><div className="receiver">To: {item.receiver}</div><div className="message"> {item.message}</div> <div className="hora">{item.created}</div></p>
+                <p key={item.identidad}><div className="receiver">From: {item.sender}</div><div className="message"> {item.message}</div> <div className="hora">{item.created}</div></p>
               </div>
             </div>
           </div>
