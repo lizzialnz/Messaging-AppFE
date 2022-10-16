@@ -9,7 +9,7 @@ const ButtonReturn = ({ title })=> {
     }
     return(
             <button className="buttonreturn" onClick={navegar}>
-              <FaHome />
+              {<FaHome />}
             </button>
     );
 }

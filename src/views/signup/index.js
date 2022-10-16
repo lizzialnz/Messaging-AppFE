@@ -1,16 +1,31 @@
-import SignUpUx from "./signUpUx";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import getSignUp from "../../services/api/signUpApi";
 
+//para ux
+import Page from "../../components/page";
+import { Field } from '../../components/inputField';
+import Buttons from "../../components/buttons";
+import ValidationField from "../../components/validationField";
+import ButtonReturn from "../../components/buttonReturn";
+import '../css/signup.css';
+
 const SignUp = () => {
   const Navigator = useNavigate();
-  const [formValues, setFormValues] = useState({ 
+  const [formValues, setFormValues] = useState({
     user: '',
     email: '',
     password: '',
     fullname: '',
-    phone: ''});
+    phone: ''
+  });
+
+  var userValue = formValues.user;
+  var emailValue = formValues.email;
+  var passwordValue = formValues.password;
+  var fullnameValue = formValues.fullname;
+  var phoneValue = formValues.phone;
+
   const onChangeHandler = (event) => {
     let { name, value } = event.target;
     let newFormValues = {
@@ -42,16 +57,58 @@ const SignUp = () => {
     Navigator("/login");
   }
   return (
-    <SignUpUx
-      userValue={formValues.user}
-      emailValue = {formValues.email}
-      passwordValue = {formValues.password}
-      fullnameValue = {formValues.fullname}
-      phoneValue = {formValues.phone}
-      onSignUpClick={onSignUpClick}
-      onLoginClick={onLoginClick}
-      onChangeHandler={onChangeHandler}
-    />
+    <Page
+      showNavBar={true}
+      useAbsoluteCenter={true}
+      pageTitle="Messages LApp"
+    >
+      <form className="form">
+        <ButtonReturn></ButtonReturn>
+        <h1 className="titulo">Crea tu cuenta</h1>
+        <Field
+          name="user"
+          labelText="Usuario"
+          type="text"
+          value={userValue}
+          onChange={onChangeHandler}
+        />
+        <Field
+          name="email"
+          labelText="Email"
+          type="email"
+          value={emailValue}
+          onChange={onChangeHandler}
+        />
+        <Field
+          name="password"
+          labelText="Contraseña"
+          type="password"
+          value={passwordValue}
+          onChange={onChangeHandler}
+        />
+        <Field
+          name="fullname"
+          labelText="Nombre"
+          type="text"
+          value={fullnameValue}
+          onChange={onChangeHandler}
+        />
+        <Field
+          name="phone"
+          labelText="Teléfono"
+          type="text"
+          value={phoneValue}
+          onChange={onChangeHandler}
+        />
+        <ValidationField user={userValue} email={emailValue} password={passwordValue} name={fullnameValue} phone={phoneValue}></ValidationField>
+        <div className="buttons">
+          <Buttons>
+            <button class="button button1" onClick={onSignUpClick}>Crear Cuenta</button>
+            <button class="button button2" onClick={onLoginClick}>¿Ya tienes cuenta?</button>
+          </Buttons>
+        </div>
+      </form>
+    </Page>
   );
 }
 export default SignUp;
