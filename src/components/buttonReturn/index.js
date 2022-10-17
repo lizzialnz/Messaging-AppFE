@@ -1,5 +1,5 @@
 import './ButtonsReturn.css';
-import { FaHome } from "react-icons/fa";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 const ButtonReturn = ({ title })=> {
@@ -9,7 +9,7 @@ const ButtonReturn = ({ title })=> {
     }
     return(
             <button className="buttonreturn" onClick={navegar}>
-              {<FaHome />}
+              {<FaArrowAltCircleLeft />}
             </button>
     );
 }

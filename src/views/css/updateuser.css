@@ -1,0 +1,13 @@
+.titulo {
+    text-align: center;
+    text-Shadow: 0px 3px 5px rgb(0,0,0, 0.5);
+}
+
+.form {
+    min-width: 380px;
+    max-width: 640px;
+}
+
+.buttons {
+    text-align: center;
+}

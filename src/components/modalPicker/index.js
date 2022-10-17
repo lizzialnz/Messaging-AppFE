@@ -24,6 +24,12 @@ const ModalPicker = () => {
     const messagesSent = () => {
         Navigator('/messages');
     }
+    const messagesRec = () => {
+        Navigator('/messagesrec');
+    }
+    const updateUser = () => {
+        Navigator('/updateuser');
+    }
     return (
         <div>
             <div className="prebutton-s">
@@ -39,8 +45,8 @@ const ModalPicker = () => {
                     <div style={{textAlign: "center"}}>
                     <Buttons>
                         <button class="button button1" onClick={messagesSent}>Sent</button>
-                        <button class="button button2" >received</button>
-                        <button class="button button1" onClick={usuario}>Ajustes</button>
+                        <button class="button button2" onClick={messagesRec}>received</button>
+                        <button class="button button1" onClick={updateUser}>Ajustes</button>
                     </Buttons>
                     <ButtonLogout>   
                     </ButtonLogout>

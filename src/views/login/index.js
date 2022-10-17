@@ -67,7 +67,7 @@ const Login = () => {
     }
   }
   const password = () => {
-    Navigator('/login');
+    Navigator('/password');
   }
 
   return (

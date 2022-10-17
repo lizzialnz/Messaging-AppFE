@@ -25,7 +25,7 @@ const MessagesUx = () => {
     >
       <div className="form">
         <ModalPicker></ModalPicker>
-        <h1 className="titulo">All Messages Sent</h1>
+        <h1 className="titulo">All Messages Received</h1>
         <ButtonNew></ButtonNew>
         <List input={inputText} />
       </div>
