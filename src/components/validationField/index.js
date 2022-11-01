@@ -1,6 +1,6 @@
 import './validationField.css';
 const ValidationField = ({ user, email, password, name, phone}) => {
-     const msj="Todos los campos son obligatorios";
+     const msj="Debe llenar todos los campos";
     if(!user || !email || !password ||!name || !phone){
         return (
             <section class="error">

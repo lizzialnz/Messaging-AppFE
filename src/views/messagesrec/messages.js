@@ -1,19 +1,10 @@
 import { axiosPrivate } from "../../services/api/axios";
 import React from "react";
 import "../css/messages.css";
-import localForage from "localforage";
 
-//cambiar el usuario estático por una peticion get
-var valor="lizzi1"
-// var sender = localForage.getItem('user').then(function (value) {
-//   alert(sender);
-// }).catch(function(err) {
-//   console.error(err);
-// });
-
-
-const baseURL = `/message/receiver/${valor}`;
-var data = []
+var valor = JSON.parse(localStorage.getItem('user'));
+var baseURL=`/message/receiver/${valor}`;
+var data = [];
 
 export default function App(props) {
   const [ post, setPost] = React.useState(null);

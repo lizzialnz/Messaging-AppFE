@@ -8,8 +8,8 @@ import Logo from '../../components/images/logosintexto.png';
 //para el action
 export const APP_LOADING = 'APP_LOADING';
 export const APP_LOADED = 'APP_LOADED';
-export const APP_ERROR = 'APP_ERROR';
-export const APP_ERROR_CLEAR = 'APP_ERROR_CLEAR';
+// export const APP_ERROR = 'APP_ERROR';
+// export const APP_ERROR_CLEAR = 'APP_ERROR_CLEAR';
 
 
 
@@ -34,15 +34,15 @@ export const app_loaded = (dispatch) => {
   });
 }
 
-export const app_on_error = (dispatch, error) => {
-  dispatch({ type: APP_ERROR, payload: error });
-}
+// export const app_on_error = (dispatch, error) => {
+//   dispatch({ type: APP_ERROR, payload: error });
+// }
 
-export const app_error_clear = (dispatch) => {
-  dispatch({
-      type: APP_ERROR_CLEAR,
-  });
-}
+// export const app_error_clear = (dispatch) => {
+//   dispatch({
+//       type: APP_ERROR_CLEAR,
+//   });
+// }
 
 
 //funcion principal

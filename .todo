@@ -8,7 +8,7 @@
           "content": "cambiar variable estática en updateuser API por una peticion get",
           "id": 1665958906935,
           "level": "success",
-          "done": false
+          "done": true
         }
       },
       {
@@ -18,7 +18,7 @@
           "content": "cambiar variable estática usuario en mensajes sent y rec por una peticion get",
           "id": 1665958935688,
           "level": "success",
-          "done": false
+          "done": true
         }
       },
       {
@@ -51,7 +51,7 @@
               "content": "agregarle la accion con peticion put para cambiar status",
               "id": 1665961546594,
               "level": "default",
-              "done": false
+              "done": true
             }
           }
         ],
@@ -59,7 +59,7 @@
           "content": "boton borrar cuenta  en componenetes",
           "id": 1665959761143,
           "level": "warning",
-          "done": false
+          "done": true
         }
       },
       {
@@ -69,6 +69,46 @@
           "content": "pantalla para nuevo mensaje",
           "id": 1665959779325,
           "level": "warning",
+          "done": true
+        }
+      },
+      {
+        "key": 1666678104903,
+        "children": [],
+        "todo": {
+          "content": "agruegar el codigo para el update y quietar la variable estática",
+          "id": 1666678104903,
+          "level": "default",
+          "done": true
+        }
+      },
+      {
+        "key": 1666678155752,
+        "children": [],
+        "todo": {
+          "content": "crear el delete api",
+          "id": 1666678155752,
+          "level": "default",
+          "done": true
+        }
+      },
+      {
+        "key": 1666678169736,
+        "children": [],
+        "todo": {
+          "content": "agruegar el boton delete cuenta en uptdate user y hacerlo funcionar",
+          "id": 1666678169736,
+          "level": "default",
+          "done": true
+        }
+      },
+      {
+        "key": 1666678197112,
+        "children": [],
+        "todo": {
+          "content": "verificar que los usuarios con cuentas inactivas OFF no puedan ingresar en el login",
+          "id": 1666678197112,
+          "level": "success",
           "done": false
         }
       }

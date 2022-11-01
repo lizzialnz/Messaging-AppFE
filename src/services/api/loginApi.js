@@ -9,6 +9,7 @@ const postLogin = (user, password) => {
       password
     }
   )
+
 };
 
 export default postLogin;

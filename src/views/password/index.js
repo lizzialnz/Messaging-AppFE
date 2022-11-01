@@ -10,16 +10,23 @@ import ValidationField from "../../components/validationField";
 import ButtonReturn from "../../components/buttonReturn";
 import '../css/password.css';
 import getPassword from '../../services/api/passwordApi';
+import ErrorField from '../../components/errorField';
 
 const Password = () => {
   const Navigator = useNavigate();
   const [formValues, setFormValues] = useState({
     email: ''
   });
+  const [msj, setmsj] = useState(null);
 
   var emailValue = formValues.email;
 
   const onChangeHandler = (event) => {
+    if(formValues.email){
+      setmsj('');
+    }else{
+      setmsj('Debe ingresar un correo');
+    }
     let { name, value } = event.target;
     let newFormValues = {
       ...formValues,
@@ -30,6 +37,9 @@ const Password = () => {
   const onPasswordClick = async (e) => {
     e.preventDefault();
     e.stopPropagation();
+    if(!formValues.email){
+      setmsj('Debe ingresar un correo válido')
+    }else{
     try {
       const data = await getPassword(
         formValues.email
@@ -38,7 +48,9 @@ const Password = () => {
       console.log(data);
     } catch (ex) {
       console.log(ex);
+      setmsj('El correo no está vinculado a una cuenta');
     }
+  }
   }
   // const onLoginClick = (e) => {
   //   e.preventDefault();
@@ -62,7 +74,7 @@ const Password = () => {
           value={emailValue}
           onChange={onChangeHandler}
         />
-        <ValidationField email={emailValue}></ValidationField>
+        <ErrorField msj = {msj}></ErrorField>
         <div className="buttons">
           <Buttons>
             <button class="button button1" onClick={onPasswordClick}>Enviar</button>
