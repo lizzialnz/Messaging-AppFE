@@ -15,6 +15,9 @@ axiosPrivate.defaults.headers.common['cache-control'] = 'no-cache';
 axiosPublic.defaults.headers.common['Content-Type'] = 'application/json';
 axiosPrivate.defaults.headers.common['Content-Type'] = 'application/json';
 
+axiosPublic.defaults.params = {}
+axiosPrivate.defaults.params = {};
+
 const setAuth = (jwt) => {
   axiosPrivate.defaults.headers.common['Authorization'] = `Bearer ${jwt}`;
 }

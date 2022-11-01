@@ -1,9 +1,7 @@
 import { axiosPublic } from './axios';
 import React, { useState, useEffect } from "react";
 
-
-//cambiar el codigo estático por una peticion get
-const putUser = (user, email, password, name, phone, codigo) => {
+const deleteUser = (codigo) => {
     // const [list, setList] = useState([]);
     // useEffect(() => {
     //   const fetchData = async () => {
@@ -21,17 +19,12 @@ const putUser = (user, email, password, name, phone, codigo) => {
     //   fetchData();
     // }, [setList]);
     
-    return axiosPublic.put(
-        'users/update/'+ codigo,
+    return axiosPublic.delete(
+        'users/delete/'+ codigo,
         {
-            codigo,
-            user,
-            email,
-            password,
-            name,
-            phone
+            codigo
         }
     )
 };
 
-export default putUser;
+export default deleteUser;

@@ -1,8 +1,8 @@
 import './ErrorField.css';
-const ErrorField = ({ children }) => {
+const ErrorField = ({ msj='' }) => {
   return (
     <section class="error">
-      {children}
+      {msj}
     </section>
   );
 }

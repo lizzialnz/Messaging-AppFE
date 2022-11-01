@@ -46,7 +46,7 @@ const ModalPicker = () => {
                     <Buttons>
                         <button class="button button1" onClick={messagesSent}>Sent</button>
                         <button class="button button2" onClick={messagesRec}>received</button>
-                        <button class="button button1" onClick={updateUser}>Ajustes</button>
+                        <button class="button button1" onClick={updateUser}>Profile</button>
                     </Buttons>
                     <ButtonLogout>   
                     </ButtonLogout>
