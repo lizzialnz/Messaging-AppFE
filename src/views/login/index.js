@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
 
 //para ux
 import Page from "../../components/page";
@@ -13,6 +12,9 @@ import '../css/login.css';
 //para action
 import { setAuth } from '../../services/api/axios';
 import postLogin from '../../services/api/loginApi';
+import { axiosPrivate } from "../../services/api/axios";
+var baseURL = '/authapi/security';
+
 //principal del login
 const Login = () => {
   const [msj, setmsj] = useState(null);
@@ -20,6 +22,12 @@ const Login = () => {
   const [formValues, setFormValues] = useState({ user: '', password: '' });
   var userValue = formValues.user;
   var passwordValue = formValues.password;
+
+  React.useEffect(() => {
+    axiosPrivate.get(baseURL).then((response) => {
+      var resultado = process.env.REACT_APP_API_TOKEN || response.data;
+    });
+  }, []);
 
   const onChangeHandler = (event) => {
     if (formValues.user && formValues.password) {
@@ -55,8 +63,8 @@ const Login = () => {
         console.log(data)
         setAuth(data.token);
         //guardar en el storage el usuario que inicia saesion
-        const usuario_login = formValues.user;
-        localStorage.setItem("user", JSON.stringify(usuario_login));
+        var login_user = formValues.user;
+        localStorage.setItem("user", JSON.stringify(login_user));
         Navigator('/messages');
       } catch (ex) {
         console.log(ex);

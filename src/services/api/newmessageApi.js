@@ -1,7 +1,8 @@
 import { axiosPublic } from './axios';
 
 const getNewMessage = (receiver, message) => {
-    var sender = 'lizzi1';
+    var sender = JSON.parse(localStorage.getItem('user'));
+    
     return axiosPublic.post(
         '/message/new',
         {

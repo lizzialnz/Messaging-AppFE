@@ -29,7 +29,7 @@ const MessagesUx = () => {
         <ButtonNew></ButtonNew>
         <List input={inputText} />
       </div>
-     
+      
     </Page>
 
   );

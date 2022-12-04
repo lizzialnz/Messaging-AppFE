@@ -4,10 +4,7 @@ import List from "./messages";
 import "../css/messages.css";
 import ModalPicker from '../../components/modalPicker';
 import ButtonNew from "../../components/buttonNew";
-
 //para UX
-
-
 const MessagesUx = () => {
   const [inputText, setInputText] = useState("");
   let inputHandler = (e) => {
@@ -23,6 +20,7 @@ const MessagesUx = () => {
       useAbsoluteCenter={true}
       pageTitle="Messages LApp"
     >
+      
       <div className="form">
         <ModalPicker></ModalPicker>
         <h1 className="titulo">All Messages Received</h1>
