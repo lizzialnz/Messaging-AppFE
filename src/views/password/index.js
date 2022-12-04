@@ -27,11 +27,13 @@ const Password = () => {
     }else{
       setmsj('Debe ingresar un correo');
     }
+
     let { name, value } = event.target;
     let newFormValues = {
       ...formValues,
       [name]: value
     }
+    
     setFormValues(newFormValues);
   }
   const onPasswordClick = async (e) => {
