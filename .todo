@@ -109,7 +109,8 @@
           "content": "verificar que los usuarios con cuentas inactivas OFF no puedan ingresar en el login",
           "id": 1666678197112,
           "level": "success",
-          "done": false
+          "done": true,
+          "focus": false
         }
       }
     ],
@@ -121,6 +122,8 @@
     "add_mode": "bottom",
     "virtual": false,
     "showLine": false,
-    "playFontSize": 24
+    "playFontSize": 24,
+    "title": ".todo",
+    "autoSort": false
   }
 }

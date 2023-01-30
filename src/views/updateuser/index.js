@@ -3,21 +3,23 @@ import { useNavigate} from 'react-router-dom';
 import putUser from "../../services/api/updateuserApi";
 import deleteUser from '../../services/api/deleteuserApi';
 import { axiosPrivate } from "../../services/api/axios";
+
+//aqui se importan los componentes para la vista
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
-
-//para ux
 import Page from "../../components/page";
 import { Field } from '../../components/inputField';
 import Buttons from "../../components/buttons";
 import ValidationField from "../../components/validationField";
 import '../css/updateuser.css';
 
-var us = JSON.parse(localStorage.getItem('user'));
+//varianles globales
+/**aqui ira el session */var us = 'lizzi1'
 var baseURL = `/users/user/${us}`;
 var datos = []
 
+//aqui se crea el componente updateuser para actualizar los datos de un usuario
 const UpdateUser = () => {
   const [msj, setmsj] = useState(null);
   const Navigator = useNavigate();

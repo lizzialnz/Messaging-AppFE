@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import getSignUp from "../../services/api/signUpApi";
 
-//para ux
+//aqui se importan los componentes para la vista
 import Page from "../../components/page";
 import { Field } from '../../components/inputField';
 import Buttons from "../../components/buttons";
@@ -10,6 +10,8 @@ import ValidationField from "../../components/validationField";
 import ButtonReturn from "../../components/buttonReturn";
 import '../css/signup.css';
 
+
+//aqui se crea el componente SignUp para crear una nueva cuenta
 const SignUp = () => {
   const Navigator = useNavigate();
   const [formValues, setFormValues] = useState({
