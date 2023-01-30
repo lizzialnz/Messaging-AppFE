@@ -2,10 +2,11 @@ import { axiosPrivate } from "../../services/api/axios";
 import React from "react";
 import "../css/messages.css";
 
-var valor = JSON.parse(localStorage.getItem('user'));
+/**aqui ira el session */ var valor = 'lizzi1'
 var baseURL = `/message/msgsuser/${valor}`;
 var data = []
 
+//aqui se carga la lista de mensajes enviados para luego mostrarlos en el archivo index.js
 export default function App(props) {
   const [ post, setPost] = React.useState(null);
   React.useEffect(() => {

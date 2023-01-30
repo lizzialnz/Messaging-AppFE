@@ -4,7 +4,7 @@ import List from "./messages";
 import "../css/messages.css";
 import ModalPicker from '../../components/modalPicker';
 import ButtonNew from "../../components/buttonNew";
-//para UX
+//para UX aqui se muestran todos los mensajes recibidos y se carga lo del archivo mensajes.js
 const MessagesUx = () => {
   const [inputText, setInputText] = useState("");
   let inputHandler = (e) => {

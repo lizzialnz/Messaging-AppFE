@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import getSignUp from "../../services/api/signUpApi";
 
-//para ux
+//Aqui se importan los componentes para la vista
 import Page from "../../components/page";
 import { Field } from '../../components/inputField';
 import Buttons from "../../components/buttons";
@@ -12,6 +12,7 @@ import '../css/password.css';
 import getPassword from '../../services/api/passwordApi';
 import ErrorField from '../../components/errorField';
 
+//aqui se crea el componente Password para cambiar la contraseña
 const Password = () => {
   const Navigator = useNavigate();
   const [formValues, setFormValues] = useState({

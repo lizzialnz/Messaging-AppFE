@@ -1,5 +1,9 @@
 import NavBar from '../navBar';
 import './page.css';
+
+//funcion para cerrar sesion por inactividad de 5 minutos
+
+
 const Page = ({ children, useAbsoluteCenter = false, showNavBar = true, pageTitle = "..." }) => {
   let className = ['page'];
   if (useAbsoluteCenter) {

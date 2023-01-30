@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 //para ux
 import Page from "../../components/page";
@@ -16,18 +17,12 @@ import { axiosPrivate } from "../../services/api/axios";
 var baseURL = '/authapi/security';
 
 //principal del login
-const Login = () => {
+const Login = ({ setToken }) => {
   const [msj, setmsj] = useState(null);
   const Navigator = useNavigate();
   const [formValues, setFormValues] = useState({ user: '', password: '' });
   var userValue = formValues.user;
   var passwordValue = formValues.password;
-
-  React.useEffect(() => {
-    axiosPrivate.get(baseURL).then((response) => {
-      var resultado = process.env.REACT_APP_API_TOKEN || response.data;
-    });
-  }, []);
 
   const onChangeHandler = (event) => {
     if (formValues.user && formValues.password) {
@@ -61,14 +56,18 @@ const Login = () => {
           formValues.password
         );
         console.log(data)
-        setAuth(data.token);
+        // const  token = data.token;
+        // setToken(token);
         //guardar en el storage el usuario que inicia saesion
-        var login_user = formValues.user;
-        localStorage.setItem("user", JSON.stringify(login_user));
+        
+       //**aqui irá el session  */
+        
         Navigator('/messages');
+
       } catch (ex) {
         console.log(ex);
         setmsj('Nombre de usuario o contraseña incorrecto');
+       
       }
     }
 
@@ -84,6 +83,7 @@ const Login = () => {
       useAbsoluteCenter={true}
       pageTitle="Messages LApp"
     >
+      <div className='login-wrapper'>
       <form ClassName="form">
         <h1 className="titulo">Iniciar Sesión</h1>
         <Field
@@ -112,8 +112,12 @@ const Login = () => {
         </div>
 
       </form>
+      </div>
     </Page>
   );
 }
 
 export default Login;
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+}

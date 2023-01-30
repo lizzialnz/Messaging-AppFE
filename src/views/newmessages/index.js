@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import getNewMessage from "../../services/api/newmessageApi";
 
-//para ux
+//exportacion de los componentes para la vista
 import Page from "../../components/page";
 import { Field } from '../../components/inputField';
 import Buttons from "../../components/buttons";
 import '../css/newmessage.css';
 import ErrorField from '../../components/errorField';
 
+
+//aqui se crea el componente NewMessage para crear un nuevo mensaje
 const NewMessage = () => {
   const Navigator = useNavigate();
   const [formValues, setFormValues] = useState({
