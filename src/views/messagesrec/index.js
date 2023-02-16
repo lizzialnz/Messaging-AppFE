@@ -4,6 +4,7 @@ import List from "./messages";
 import "../css/messages.css";
 import ModalPicker from '../../components/modalPicker';
 import ButtonNew from "../../components/buttonNew";
+import Timeout from "../../components/timeout/timeout";
 //para UX aqui se muestran todos los mensajes recibidos y se carga lo del archivo mensajes.js
 const MessagesUx = () => {
   const [inputText, setInputText] = useState("");
@@ -20,7 +21,7 @@ const MessagesUx = () => {
       useAbsoluteCenter={true}
       pageTitle="Messages LApp"
     >
-      
+      <Timeout />
       <div className="form">
         <ModalPicker></ModalPicker>
         <h1 className="titulo">All Messages Received</h1>

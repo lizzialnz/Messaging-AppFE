@@ -14,6 +14,7 @@ import Buttons from "../../components/buttons";
 import ValidationField from "../../components/validationField";
 import '../css/updateuser.css';
 
+import Timeout from "../../components/timeout/timeout";
 //varianles globales
 /**aqui ira el session */var us = 'lizzi1'
 var baseURL = `/users/user/${us}`;
@@ -119,6 +120,7 @@ const UpdateUser = () => {
         useAbsoluteCenter={true}
         pageTitle="Messages LApp"
       >
+        <Timeout />
         <form className="form">
           <h1 className="titulo">Actualiza tu Información</h1>
           <Field

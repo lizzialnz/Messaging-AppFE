@@ -9,6 +9,7 @@ import Buttons from "../../components/buttons";
 import '../css/newmessage.css';
 import ErrorField from '../../components/errorField';
 
+import Timeout from "../../components/timeout/timeout";
 
 //aqui se crea el componente NewMessage para crear un nuevo mensaje
 const NewMessage = () => {
@@ -65,6 +66,7 @@ const NewMessage = () => {
       useAbsoluteCenter={true}
       pageTitle="Messages LApp"
     >
+      <Timeout />
       <form className="form">
         <h1 className="titulo">New Message</h1>
         <Field
