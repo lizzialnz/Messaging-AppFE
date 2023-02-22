@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 
 const Timeout = () => {
 
-    // -------------------------------------- Actividad del usuario -------------------------------------- //
+// -------------------------------------- Actividad del usuario -------------------------------------- //
 
 // aqui comienza el codigo para el tiempo inactivo
   const [loggedIn, setLoggedIn] = useState(true);
